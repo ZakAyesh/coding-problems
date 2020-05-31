@@ -2,15 +2,17 @@
 
 namespace Problem1_1
 {
-    public class UniqueCharactersInString
+    public class NaiveSolution: ISolution
     {
-        public bool Solve(string text)
+        public bool AreAllCharactersUnique(string text)
         {
+            //0(1)+O(N)
             foreach (char c in text)
             {
+                // O(N)
                 for (int i=text.IndexOf(c) + 1; i < text.Length; i++)
                 {
-                    if( c == text[1])
+                    if( c == text[i])
                     {
                         return false;
 
@@ -23,3 +25,4 @@ namespace Problem1_1
         }
     }
 }
+//Solution: O(N^2)
