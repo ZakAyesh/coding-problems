@@ -15,9 +15,7 @@ namespace Problem1_1
                     if( c == text[i])
                     {
                         return false;
-
                     }
-                        
                 }
             }
 
