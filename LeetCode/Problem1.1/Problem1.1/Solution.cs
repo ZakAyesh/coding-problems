@@ -4,19 +4,22 @@ namespace Problem1
 {
     public class Solution: ISolution
     {
-        public bool AreAllCharactersUnique(string text)
+        public int[] TwoSum(int[] nums, int target)
         {
-            var hashSet = new HashSet<char>();
+            var dict = new Dictionary<int, int>();
 
-            foreach (char c in text)
+            for (int i = 0; i < nums.Length; i++)
             {
-                if (!hashSet.Add(c))
+                int complement = target - nums[i];
+                if (dict.ContainsKey(complement))
                 {
-                    return false;
+                    return new int[] { dict[complement], i };
                 }
-            }
 
-            return true;
+                dict[nums[i]] = i;
+            }
+            return new int[] { };
         }
+
     }
 }
