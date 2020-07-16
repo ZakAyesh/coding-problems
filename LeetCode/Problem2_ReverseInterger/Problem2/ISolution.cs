@@ -3,6 +3,6 @@ namespace Problem1
 {
     public interface ISolution
     {
-            int[] TwoSum(int[] nums, int target);
+        abstract int Reverse(int x);
     }
 }
