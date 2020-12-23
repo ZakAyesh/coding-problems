@@ -1,4 +1,4 @@
-# CrackingTheCodingInterview
+# Coding Problems
 
 Interview prep
 
